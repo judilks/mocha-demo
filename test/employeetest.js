@@ -16,7 +16,7 @@ describe('employees', () => {
         .get('/employees')
         .end((err, res) => {
           res.should.have.status(200);
-          res.should.be.json;
+          res.should.be.json();
           res.body.should.be.a('object');
           done();
         });
@@ -28,7 +28,7 @@ describe('employees', () => {
       .send({name: 'ggggg', email: 'goodmorning@gmail.com'})
       .end((err, res) => {
         res.should.have.status(200);
-        res.should.be.json;
+        res.should.be.json();
         res.body.should.be.a('object');
         done();
       });
@@ -40,7 +40,7 @@ describe('employees', () => {
       .send({name:'friend', email:'goodmorningvietnam@gmail.com'})
       .end((err, res) => {
         res.should.have.status(200);
-        res.should.be.json;
+        res.should.be.json();
         res.body.should.be.a('object');
         done();
       });
@@ -51,7 +51,7 @@ describe('employees', () => {
       .delete('/employees/goodmorningvietnam@gmail.com')
       .end((err, res) => {
         res.should.have.status(200);
-        res.should.be.json;
+        res.should.be.json();
         res.body.should.be.a('object');
         done();
       });
